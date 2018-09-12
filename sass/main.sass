@@ -1,0 +1,833 @@
+@import "fonts" 
+@import "libs"
+@import "vars"  
+  
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0 
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline 
+
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block  
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q  
+  quotes: none
+ 
+blockquote
+  &:before, &:after 
+    content: ''
+    content: none
+
+q 
+  &:before, &:after 
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse 
+  border-spacing: 0
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: $white
+	opacity: 1
+
+*:-moz-placeholder
+	color: $white
+	opacity: 1
+
+*::-moz-placeholder
+	color: $white
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: $white
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: $white
+body input:required:valid,
+body textarea:required:valid
+	color: $white
+ 
+html, body
+	--def: #96B7C4
+	--inv: #fff
+	height: 100% 
+	margin: 0
+	padding: 0
+	font-size: 10px
+body
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+section
+	position: relative
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+::selection
+	background-color: $ac
+	color: $white
+.header
+	height: 100vh
+	min-height: 500px
+	width: 100% 
+	background-size: cover
+	background-position: center center
+	background-repeat: no-repeat
+	color: $white
+	z-index: 1 
+	&-top
+		border-bottom: 1px solid rgba($white, .4)
+		display: flex
+		a
+			img
+				width: 79px
+		ul
+			display: flex
+			justify-content: space-between 
+			li   
+				a   
+					display: inline-block
+					padding-top: 40px  
+					padding-bottom: 30px			
+					text-decoration: none 
+					Color: $white  
+					font-family: 'Myriad Pro', 'GothamPro', 'OpenSans', 'Roboto', sans serif
+					font-size: 2em
+					line-height: 2em
+					font-weight: 400 
+					border-bottom: 5px solid transparent
+					transition: all .25s ease-out
+					&:hover 
+						font-weight: 600
+						font-style: italic
+						border-bottom: 5px solid rgba($ac, .99)
+		.soc
+			display: flex
+			justify-content: space-around
+			i
+				cursor: pointer
+				color: #f5f5f5
+				font-size: 2em
+				transition: all .2s ease-out
+				&:nth-child(odd)
+					&:hover
+						transform: rotate(25deg)
+						opacity: .75	
+				&:nth-child(even)
+					&:hover
+						transform: rotate(-25deg)
+						opacity: .75
+	&-center
+		width: 100%
+		height: 65vh
+		display: flex
+		align-items: center
+		h1, h4
+			display: flex
+			justify-content: center	
+			text-transform: uppercase
+		h1
+			font-family: 'GothamPro', 'Myriad Pro', 'OpenSans', 'Roboto', sans serif
+			font-weight: bold
+			font-size: 15em
+			line-height: 1em
+			color: $white
+			margin-bottom: 20px
+		h4
+			font-family: 'GothamPro', 'Myriad Pro', 'OpenSans', 'Roboto', sans serif
+			font-weight: 500
+			font-size: 2.5em
+			line-height: 20px
+			color: $ac
+			letter-spacing: 0.7em
+	&-bottom
+		width: 100%
+		height: auto
+		display: flex
+		align-items: center
+		color: $white
+		.top
+			text-decoration: none
+			color: $white
+		span
+			display: flex
+			justify-content: center	
+			font-size: 1.3em	 
+			padding-top: 15px
+			i
+				font-size: 1.5em	
+				line-height: 0
+				width: 40px
+				height: 40px
+				line-height: 40px
+				border-radius: 50em 
+				border: 1px solid $white	
+				opacity: .8
+				cursor: pointer
+
+@-webkit-keyframes pulse
+	0%
+		-webkit-transform: scale(1)
+		transform: scale(1)
+
+	50%
+		-webkit-transform: scale(1.3)
+		transform: scale(1.3)
+
+	100%
+		-webkit-transform: scale(0.9)
+		transform: scale(0.9)
+
+
+@keyframes pulse
+	0%
+		-webkit-transform: scale(1)
+		-ms-transform: scale(1)
+		transform: scale(1)
+	50%
+		-webkit-transform: scale(1.3)
+		-ms-transform: scale(1.3)
+		transform: scale(1.3)
+	100%
+		-webkit-transform: scale(0.9)
+		-ms-transform: scale(0.9)
+		transform: scale(0.9)
+
+
+.pulse
+	-webkit-animation-name: pulse
+	animation-name: pulse
+	animation-duration: .8s
+	animation-iteration-count: infinite
+
+.proverka
+	font-size: 5rem
+	position: fixed
+	z-index: 100
+	color: red
+	padding: 2rem
+	font-weight: 900
+  
+/*_________BURGER_________*/
+
+#show 
+	display: none  
+.menu-small
+	&__img
+		display: block
+		margin: 0 auto
+	&__navigation
+		&_inner
+			ul
+				padding: 20px
+				display: flex
+				justify-content: space-between 
+				flex-direction: column
+				li   	 
+					a   
+						text-align: center
+						display: block
+						padding-top: 15px  
+						padding-bottom: 15px			
+						text-decoration: none
+						Color: $white 
+						font-family: 'Myriad Pro', 'GothamPro', 'OpenSans', 'Roboto', sans serif
+						font-size: 2em
+						line-height: 2em
+						font-weight: 400
+						border-bottom: none
+						transition: all .25s ease-out
+						&:hover
+							font-weight: 600
+							font-style: italic   
+							border-bottom: none
+			.soc
+				display: flex
+				justify-content: space-around
+				i
+					text-align: center
+					cursor: pointer
+					width: 40px
+					height: 40px
+					line-height: 35px
+					color: #f5f5f5
+					font-size: 2em
+					transition: all .2s ease-out
+					&:hover
+					&:nth-child(odd) 
+						&:hover
+							transform: rotate(25deg)
+							opacity: .75	 
+					&:nth-child(even)
+						&:hover
+							transform: rotate(-25deg)
+							opacity: .75  
+
+	&__burger 
+		&_menu
+			&-hambergerIcon 
+
+
+ /* ~~~~~~~ INIT. BTN ~~~~~~~*/
+
+.btn
+	position: relative
+	color: var(--inv)
+	transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1)
+	cursor: pointer
+	user-select: none
+	&:before, &:after
+		content: ''
+		position: absolute
+		transition: inherit
+		z-index: -1
+	&:hover
+		color: var(--def)
+		transition-delay: .2s
+		&:before
+			transition-delay: 0s
+		&:after
+			background: var(--inv)
+			transition-delay: .1s
+
+/* From Top*/
+
+.from-top
+	&:before, &:after
+		left: 0
+		height: 0
+		width: 100%
+	&:before
+		bottom: 0
+		border: 1px solid var(--inv)
+		border-top: 0
+		border-bottom: 0
+	&:after
+		top: 0
+		height: 0
+	&:hover
+		&:before, &:after
+			height: 100%
+
+/* From Left*/
+
+.from-left
+	&:before, &:after    
+		top: 0
+		width: 0
+		height: 100%
+	&:before
+		right: 0
+		border: 1px solid var(--inv)
+		border-left: 0
+		border-right: 0
+	&:after
+		left: 0
+	&:hover
+		&:before, &:after
+			width: 100%
+
+/* From Right*/
+
+.from-right
+	&:before, &:after
+		top: 0
+		width: 0 
+		height: 100%
+	&:before
+		left: 0
+		border: 1px solid var(--inv)
+		border-left: 0
+		border-right: 0
+	&:after
+		right: 0
+	&:hover
+		&:before, &:after
+			width: 100%
+
+/* From Middle*/
+
+.from-middle
+	&:before
+		top: 0
+		left: 50%
+		height: 100%
+		width: 0
+		border: 1px solid var(--inv)
+		border-left: 0
+		border-right: 0
+	&:after
+		bottom: 0
+		left: 0
+		height: 0
+		width: 100%
+		background: var(--inv)
+	&:hover
+		&:before
+			left: 0
+			width: 100%
+		&:after
+			top: 0
+			height: 100%
+
+/* From Bottom*/
+
+.from-bottom
+	&:before, &:after
+		left: 0
+		height: 0
+		width: 100%
+	&:before
+		top: 0
+		border: 1px solid var(--inv)
+		border-top: 0
+		border-bottom: 0
+	&:after
+		bottom: 0
+		height: 0
+	&:hover
+		&:before, &:after
+			height: 100%
+
+/*_________BURGER_________*/
+
+.s-features, .s-callBack
+	background-color: $ac
+	padding-top: 140px
+	padding-bottom: 125px
+	line-height: 0
+	margin: 0
+	color: $white
+	&__letter
+		text-transform: uppercase
+		font-size: 200px
+		line-height: 0
+		margin: 0
+		padding: 0	
+		opacity: .15
+		font-family: 'Roboto', 'GothamPro', 'Myriad Pro', 'OpenSans', sans serif
+		font-weight: bold
+		transform: matrix( 8.23928436410974, 0, 0, 8.23928436410975, 0, 0)
+		position: absolute
+		top: 10px
+		left: 50%
+		transform: translate(-50%, 0)
+	&__caption
+		text-transform: uppercase
+		font-size: 3.5em		
+		font-family: 'GothamPro', 'Myriad Pro', 'OpenSans', 'Roboto', sans serif
+		font-weight: 500
+		line-height: 35px
+		margin-bottom: 140px
+	&__img
+		margin: 0 auto
+		width: 130px
+		height: 130px
+		border-radius: 50em
+		display: flex
+		justify-content: center	
+		align-items: center
+		background-color: #2e85aa
+		img
+			width: 35px
+			height: 35px
+	&__number
+		line-height: 60px
+		font-size: 1.8em
+		text-transform: uppercase
+		font-family: 'GothamPro', 'Myriad Pro', 'OpenSans', 'Roboto', sans serif
+		font-weight: 500		
+	&__description
+		line-height: 24px
+		font-size: 1.5em
+		font-family: 'Roboto', 'GothamPro', 'Myriad Pro', 'OpenSans', sans serif		
+.s-review
+	&-first, &-second
+		padding-top: 85px
+		padding-bottom: 115px 
+		background-color: #222222
+		color: $white
+		background-image: url(../img/review/review-1.jpg)
+		background-repeat: no-repeat
+		background-position: 100% 0
+		background-size: 50% 100% 
+		&__date, &__culture
+			line-height: 24px 
+			font-size: 1.3em
+		&__date
+			border-right: 2px solid $white
+			padding-right: 12px
+		&__culture
+			padding-left: 9px
+		&__name
+			line-height: 36px
+			font-size: 2.5em
+			font-weight: 500
+			text-transform: uppercase
+		&__descriprion
+			line-height: 24px
+			font-size: 1.5em
+			font-weight: 300
+			margin-top: 32px
+	&-second
+		background-color: $white
+		color: #222
+		background-image: url(../img/review/review-2.jpg)
+		background-position: 0 0
+		&__date
+			border-right: 2px solid #222
+.s-blogs, .s-team
+	background-color: $white
+	padding-top: 130px
+	padding-bottom: 100px
+	line-height: 0
+	margin: 0
+	color: #222
+	&__letter
+		text-transform: uppercase
+		font-size: 200px
+		line-height: 0
+		margin: 0
+		padding: 0	
+		opacity: .15
+		font-family: 'Roboto', 'GothamPro', 'Myriad Pro', 'OpenSans', sans serif
+		font-weight: bold
+		transform: matrix( 8.23928436410974, 0, 0, 8.23928436410975, 0, 0)
+		position: absolute
+		top: 10px
+		left: 50%
+		transform: translate(-50%, 0)
+	&__caption
+		text-transform: uppercase
+		font-size: 3.5em		
+		font-family: 'GothamPro', 'Myriad Pro', 'OpenSans', 'Roboto', sans serif
+		font-weight: 500
+		line-height: 35px
+		margin-bottom: 100px
+	&__love
+		font-size: 3em
+		line-height: 37px
+		margin-bottom: 70px
+	&__img
+		display: block
+		width: 100%
+		height: 280px
+		background-position: center center
+		background-size: cover
+		background-repeat: no-repeat
+		display: flex
+		img
+			width: 100%
+			height: 100%
+	&__fresh
+		font-size: 1.8em
+		line-height: 26px
+		font-weight: 500
+		color: $ac
+		margin-top: 30px
+		margin-bottom: 15px
+	&__description
+		font-size: 1.5em
+		line-height: 24px
+.s-pause
+	padding-top: 100px
+	padding-bottom: 140px
+	background-color: $ac
+	&__main
+		width: 100%
+		display: flex
+		align-items: center
+		img
+			width: 70px
+			height: 70px
+			margin-right: 30px
+		p
+			font-size: 1.5em
+			line-height: 24px
+			color: $white
+.s-phone
+	padding-top: 100px
+	padding-bottom: 100px
+	background-image: url(../img/bg-pause.jpg)
+	background-position: center center
+	background-size: cover
+	color: $white
+	&__name
+		font-size: 2.5em
+		line-height: 36px
+		font-weight: 500
+		text-transform: uppercase
+		margin-bottom: 20px
+	&__description
+		font-size: 1.5em
+		line-height: 24px
+		font-weight: 300
+		margin-bottom: 65px
+	&__lines
+		&__list-adaptive
+			display: block
+			background: $ac
+			width: 100%
+			padding: 12px
+			margin-bottom: 25px
+			font-size: 1.5em
+			line-height: 24px
+			font-weight: 500
+			&:nth-child(1)
+				width: 85%
+			&:nth-child(2)
+				width: 90%
+			&:nth-child(3)
+				width: 95%		
+	&__img
+		display: flex
+		img
+			margin: 0 auto						
+.s-team
+	&__img
+		width: 100%
+		height: 415px
+	&__men 
+		display: flex
+		justify-content: center
+		flex-direction: column
+		padding-top: 20px
+		padding-bottom: 20px
+		background-color: $white
+		max-width: 215px
+		height: auto
+		margin-left: auto
+		margin-right: auto
+		transform: translate(0, -50%)
+		&_name
+			font-size: 2em
+			line-height: 24px
+			font-weight: 500
+			color: $ac
+			text-transform: uppercase
+		&_prof
+			line-height: 24px
+			font-weight: 500		 	
+			font-size: 1.5em
+			color: #000
+.s-callBack
+	background-image: url(../img/bg-back.jpg)
+	background-position: center center
+	background-size: cover
+	background-repeat: no-repeat
+	input, textarea
+		width: 100%
+		margin-bottom: 45px
+		background-color: transparent
+		border: 1px solid $white
+		padding: 15px
+		color: $white
+		font-size: 1.5em
+		line-height: 20px
+		outline: none
+		border-radius: 1px
+/*	button
+		display: block
+		margin: 0 auto
+		padding: 20px 60px
+		font-size: 2.4em
+		line-height: 24px
+		text-transform: uppercase
+		color: $white
+		background-color: $ac
+		border: none
+		cursor: pointer*/
+
+/*_________MAIL_________*/
+
+.mail-btn
+  margin: 0 auto
+  position: relative
+  top: 35%
+  display: inline-block
+  padding: 0.5rem 1rem
+  border: 2px solid rgba(255, 255, 255, 0.5)
+  background: none
+  outline: none
+  -webkit-appearance: none
+  font-size: 2rem
+  color: rgba(255, 255, 255, 1)
+  text-decoration: none
+  text-transform: uppercase
+  letter-spacing: 0.5rem
+  text-indent: 0.5rem
+  cursor: pointer
+  transition: color 1.5s .5s, border 3s 1s
+  &:before, &:after
+    content: ''
+    position: absolute
+    opacity: 0
+    backface-visibility: visible
+    transform-style: preserve-3d
+    perspective: 400px
+    transform-origin: 50% -50%
+    transform: rotateX(360deg) rotateY(0) translateX(-50%) translateY(0) scale(0.2)
+    transition: all 0.5s
+  &:before
+    top: 5px
+    left: 50%
+    height: 3rem
+    background: white
+    border-top: 2rem solid rgba(#222, .9)
+    border-right: 3rem solid transparent
+    border-left: 3rem solid transparent
+  &:after
+    top: 0
+    left: 50%
+    border-top: 2rem solid white
+    border-right: 3rem solid transparent
+    border-left: 3rem solid transparent
+  &:hover
+    color: rgba(255, 255, 255, 0)
+    border: 2px solid rgba(255, 255, 255, 0)
+    transition: color .25s, border .25s
+    &:before, &:after
+      opacity: 1
+      transform: rotateX(0) rotateY(-10deg) translateX(-50%) translateY(0) scale(1)
+
+.fly
+  color: rgba(255, 255, 255, 0)
+  border: 2px solid rgba(255, 255, 255, 0)
+  animation: sended 4s 0.8s forwards
+  &:before, &:after
+    animation: flyout .6s forwards
+
+@keyframes sended
+  0%
+    height: 2rem
+    width: 3.5rem
+    border-top: 0
+    border-right: 0
+    border-bottom: 10px solid white
+    border-left: 10px solid white
+    opacity: 0
+    transform: rotate(-45deg) translateX(300%) translateY(-500%)
+
+  5%
+    height: 2rem
+    width: 3.5rem
+    border-top: 0
+    border-right: 0
+    border-bottom: 10px solid white
+    border-left: 10px solid white
+    opacity: 1
+    transform: rotate(-45deg) translateX(0) translateY(0)
+
+  78%
+    height: 2rem
+    width: 3.5rem
+    border-top: 0
+    border-right: 0
+    border-bottom: 10px solid white
+    border-left: 10px solid white
+    opacity: 1
+    transform: rotate(-45deg) translateX(0) translateY(0)
+
+  79%
+    height: 2rem
+    width: 3.5rem
+    border-top: 0
+    border-right: 0
+    border-bottom: 10px solid white
+    border-left: 10px solid white
+    opacity: 0
+    transform: rotate(-45deg) translateX(0) translateY(0)
+
+  80%
+    height: auto
+    width: auto
+    color: rgba(255, 255, 255, 0)
+    border: 2px solid rgba(255, 255, 255, 0)
+    opacity: 0
+    transform: rotate(0) translateX(0) translateY(0)
+
+  100%
+    height: auto
+    width: auto
+    color: rgba(255, 255, 255, 1)
+    border: 2px solid rgba(255, 255, 255, 0.5)
+    opacity: 1
+    transform: rotate(0) translateX(0) translateY(0)
+
+
+@keyframes flyout
+  0%
+    opacity: 1
+    transform: rotateX(0) rotateZ(0) translateX(-50%) translateY(0) scale(1)
+
+  33%
+    opacity: 0.66
+    transform: rotateX(0) rotateZ(-5deg) translateX(-100%) translateY(0) scale(1)
+
+  100%
+    opacity: 0
+    transform: rotateX(0) rotateZ(0) translateX(1000%) translateY(0) scale(1)		
+/*_________MAIL_________*/
+
+.s-map
+	height: 350px
+.site-footer
+	background-color: #222
+	padding-top: 35px
+	padding-bottom: 35px
+	&__footer
+		display: flex
+		flex-direction: row
+		align-items: center
+		justify-content: space-between
+		width: 100%
+		&_p
+			color: $white
+			font-size: 1.3em
+			line-height: 36px
+			font-family: 'Roboto', 'GothamPro', 'Myriad Pro', 'OpenSans', sans serif
+			font-weight: 400
+			vertical-align: middle
+			img
+				vertical-align: top
+				margin-left: 2px
+				margin-right: 2px
+
+@import "media" // Всегда в конце
+
+
+
+
